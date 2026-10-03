@@ -22,6 +22,25 @@ CREATE TABLE IF NOT EXISTS strain_readings (
     processed_at timestamptz
 );
 CREATE INDEX IF NOT EXISTS idx_strain_readings_status ON strain_readings (status, id);
+
+CREATE TABLE IF NOT EXISTS span_comparisons (
+    id serial PRIMARY KEY,
+    baseline_span text NOT NULL,
+    compare_span text NOT NULL,
+    window_start timestamptz,
+    window_end timestamptz,
+    baseline_reading_id integer,
+    baseline_microstrain double precision,
+    baseline_processed_at timestamptz,
+    compare_reading_id integer,
+    compare_microstrain double precision,
+    compare_processed_at timestamptz,
+    diff_microstrain double precision,
+    computed_by text NOT NULL,
+    computed_at timestamptz NOT NULL DEFAULT now()
+);
+CREATE INDEX IF NOT EXISTS idx_span_comparisons_pair
+    ON span_comparisons (baseline_span, compare_span, id DESC);
 """
 
 
