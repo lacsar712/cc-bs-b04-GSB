@@ -129,3 +129,121 @@ th {
   background: #fff8e1;
   color: #f57f17;
 }
+
+.topright {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.navs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+button.nav {
+  padding: 0.4rem 0.9rem;
+}
+
+button.nav.active {
+  background: #0d47a1;
+}
+
+.who {
+  white-space: nowrap;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+select {
+  padding: 0.45rem 0.6rem;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  min-width: 180px;
+  background: #fff;
+}
+
+.muted {
+  color: #666;
+  font-size: 0.82rem;
+  margin: 0.25rem 0;
+}
+
+.note {
+  color: #555;
+  font-size: 0.88rem;
+  background: #eceff1;
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  margin: 0.75rem 0 0;
+}
+
+.result {
+  margin-top: 1rem;
+}
+
+.cmp-table th,
+.cmp-table td {
+  vertical-align: top;
+  width: 33.33%;
+}
+
+.cmp-table th.center,
+.cmp-table td.diff-cell {
+  text-align: center;
+  background: #f7f9fc;
+}
+
+.cmp-table th.right {
+  text-align: right;
+}
+
+.side {
+  min-width: 200px;
+}
+
+.side-title {
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.side .strain {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.side.missing {
+  color: #8a6d00;
+  background: #fff8e1;
+}
+
+.diff-cell {
+  vertical-align: middle !important;
+}
+
+.diff {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0d47a1;
+}
+
+.no-diff {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #b00020;
+}
+
+.basis {
+  font-size: 0.85rem;
+  color: #444;
+  background: #f4f6f8;
+  border-left: 3px solid #1565c0;
+  padding: 0.5rem 0.75rem;
+  margin: 0.75rem 0 0.25rem;
+}
+
+.diff-archive {
+  font-weight: 600;
+  color: #0d47a1;
+}
